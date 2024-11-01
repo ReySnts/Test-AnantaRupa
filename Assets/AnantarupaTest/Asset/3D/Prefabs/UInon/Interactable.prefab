@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 312926501646985571}
   - component: {fileID: 728190828141611714}
   - component: {fileID: 116514637338358355}
+  - component: {fileID: 7848317757132419001}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -186,6 +187,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7848317757132419001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120828488850699017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88267f415ff582c4facfc9b5c7f006c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6156308921471280844
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,9 +241,11 @@ GameObject:
   - component: {fileID: 8470328031942536798}
   - component: {fileID: 5361539319878524639}
   - component: {fileID: 4758516875125663459}
+  - component: {fileID: 2210770750994078030}
+  - component: {fileID: 8695355624532429340}
   m_Layer: 0
   m_Name: Interactable
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,6 +315,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2210770750994078030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467803675480294106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c0b297dd548724586124c53d11300d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8695355624532429340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467803675480294106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b8abe27e33bab45a89036e0f254da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CanBeInteracted>k__BackingField: 1
+  <IsTriggered>k__BackingField: 0
 --- !u!1001 &5983965866483586041
 PrefabInstance:
   m_ObjectHideFlags: 0

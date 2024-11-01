@@ -5,12 +5,18 @@ namespace ProgrammerTest
 	public class PlayerController : MonoBehaviour
 	{
 		[SerializeField] private Transform playerView;
+
 		private bool _facingRight = true;
+
 		private const float Speed = 10f;
 
-		void Update()
+		private InputManager inputManager;
+
+        private void Awake() => inputManager = GetComponentInParent<InputManager>();
+
+        private	void Update()
 		{
-			if (Input.GetKey(KeyCode.A))
+			if (inputManager.GetKeyA)
 			{
 				MoveHorizontal(Vector3.left);
 				if (_facingRight)
@@ -19,7 +25,7 @@ namespace ProgrammerTest
 					UpdateFacing();
 				}
 			}
-			else if (Input.GetKey(KeyCode.D))
+			else if (inputManager.GetKeyD)
 			{
 				MoveHorizontal(Vector3.right);
 				if (!_facingRight)
@@ -30,14 +36,8 @@ namespace ProgrammerTest
 			}
 		}
 
-		private void MoveHorizontal(Vector3 direction)
-		{
-			transform.position += (direction * Speed * Time.deltaTime);
-		}
+		private void MoveHorizontal(Vector3 direction) => transform.position += Speed * Time.deltaTime * direction;
 
-		private void UpdateFacing()
-		{
-			playerView.localScale = new Vector3(_facingRight ? 1 : -1, 1, 1);
-		}
+		private void UpdateFacing() => playerView.localScale = new Vector3(_facingRight ? 1 : -1, 1, 1);
 	}
 }
